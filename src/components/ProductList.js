@@ -1,15 +1,12 @@
-import React from 'react';
 import ProductCard from './ProductCard';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/ProductList.module.css';
 
-const ProductList = ({ products }) => {
+export default function ProductList({ products }) {
   return (
     <div className={styles.grid}>
-      {products.map(product => (
+      {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
     </div>
   );
-};
-
-export default ProductList;
+}
